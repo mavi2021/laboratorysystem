@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: laboratorysystem
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/laboratorysystem?useSSL=false&serverTimezone=UTC&&allowPublicKeyRetrieval=true
+    username: root
+    password: 1144396917Jj
+  mail:
+    host: smtp.163.com
+    port: 25
+    username: zeng_cqupt@163.com
+    password: QGIPKHLWLEUNVFRS
+    protocol: smtp
+#  15893572461
+server:
+  port: 8081
+aliyun:
+  oss:
+    file:
+      bucketName: xiaomi-go2
+      endpoint: oss-cn-hongkong.aliyuncs.com
+      bucket: xiaomi-go2.oss-cn-hongkong.aliyuncs.com
+      accessKeyId: LTAI5t95jCFtkC5PV4AGXFNV
+      secretAccessKey: 6Ki43tzFXhA7AZU5U5wa9ZjyAF18eH
+      root: ZJ
