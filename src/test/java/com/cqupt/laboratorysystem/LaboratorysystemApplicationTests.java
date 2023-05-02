@@ -1,7 +1,9 @@
 package com.cqupt.laboratorysystem;
 
+import com.cqupt.laboratorysystem.config.EmailConfig;
 import com.cqupt.laboratorysystem.controller.MyController;
 import com.cqupt.laboratorysystem.service.DocumentService;
+import com.cqupt.laboratorysystem.service.LoginService;
 import com.cqupt.laboratorysystem.service.serviceImpl.ExperimentServiceImpl;
 import com.cqupt.laboratorysystem.service.EmailService;
 import org.junit.jupiter.api.Test;
@@ -25,11 +27,17 @@ class LaboratorysystemApplicationTests {
 
     @Autowired
     private DocumentService documentService;
+
+    @Autowired
+    private EmailConfig emailConfig;
+
+    @Autowired
+    private LoginService loginService;
     @Test
     void contextLoads(){
-        String filePath = "D:\\Workspace\\1.xlsx";
-        documentService.upload(filePath);
-
+//        String filePath = "D:\\Workspace\\1.xlsx";
+//        documentService.upload(filePath);
+        System.out.println(loginService.sendCode());
 //        emailService.sendSimpleEmail(MAIL_ME, "HELLOSHUHENG","HAHAHAHHAHA");
 
     }
