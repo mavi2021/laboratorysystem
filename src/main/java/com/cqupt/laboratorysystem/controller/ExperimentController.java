@@ -1,5 +1,6 @@
 package com.cqupt.laboratorysystem.controller;
 
+import com.cqupt.laboratorysystem.annotation.Limit;
 import com.cqupt.laboratorysystem.dto.Result;
 import com.cqupt.laboratorysystem.pojo.Experiment;
 import com.cqupt.laboratorysystem.service.ExperimentService;
@@ -9,7 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 /**
- * @Author : ZengJun
  * @create 2023/4/30 16:03
  */
 @Api(tags = "实验管理相关接口")
@@ -26,6 +26,7 @@ public class ExperimentController {
      */
     @GetMapping("/list")
     @ApiOperation("查询所有实验详情")
+    @Limit(period = 60, requestLimitMaxNum = 100, type = "ip")
     public Result queryExperimentList(){
         return Result.ok(experimentService.query().list());
     }

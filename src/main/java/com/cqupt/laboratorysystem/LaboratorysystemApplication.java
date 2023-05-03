@@ -8,7 +8,6 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
 @SpringBootApplication
 @EnableConfigurationProperties
-@EnableAspectJAutoProxy
 @MapperScan("com.cqupt.laboratorysystem.dao")
 public class LaboratorysystemApplication {
 

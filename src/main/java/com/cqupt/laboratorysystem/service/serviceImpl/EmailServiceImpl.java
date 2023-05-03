@@ -2,6 +2,7 @@ package com.cqupt.laboratorysystem.service.serviceImpl;
 
 import com.cqupt.laboratorysystem.service.EmailService;
 import lombok.Data;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.mail.SimpleMailMessage;
@@ -15,10 +16,10 @@ import javax.mail.internet.InternetAddress;
  * @create 2023/5/2 10:44
  */
 @Service
+@RequiredArgsConstructor
 public class EmailServiceImpl implements EmailService {
 
-    @Autowired
-    private JavaMailSender javaMailSender;
+    private final JavaMailSender javaMailSender;
 
     @Value("${spring.mail.username}")
     private String address;

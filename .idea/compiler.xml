@@ -11,7 +11,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="laboratorysystem" target="1.8" />
+      <module name="laboratorysystem" target="8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

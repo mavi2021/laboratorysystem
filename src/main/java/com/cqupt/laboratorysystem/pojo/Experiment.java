@@ -9,7 +9,6 @@ import lombok.Data;
 import java.time.LocalDateTime;
 
 /**
- * @Author : ZengJun
  * @create 2023/4/30 16:24
  */
 @Data
@@ -19,7 +18,7 @@ public class Experiment {
 
     /**
      * 实验id
-     * Redis算法生成，全局唯一
+     * 雪花算法生成，全局唯一
      */
 //    @TableId(value = "id")
     private Long id;

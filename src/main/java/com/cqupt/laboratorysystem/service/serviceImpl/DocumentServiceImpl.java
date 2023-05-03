@@ -6,6 +6,7 @@ import com.aliyun.oss.model.GetObjectRequest;
 import com.aliyun.oss.model.OSSObject;
 import com.aliyun.oss.model.PutObjectRequest;
 import com.cqupt.laboratorysystem.service.DocumentService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -16,10 +17,10 @@ import java.io.File;
  * @create 2023/5/2 10:54
  */
 @Service
+@RequiredArgsConstructor
 public class DocumentServiceImpl implements DocumentService {
 
-    @Autowired
-    private OSS ossClient;
+    private final OSS ossClient;
 
     @Value("${aliyun.oss.file.bucketName}")
     private String bucketName;

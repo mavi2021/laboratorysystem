@@ -14,9 +14,13 @@ import org.springframework.stereotype.Service;
 public class LoginServiceImpl implements LoginService {
 
     @Override
-    @Limit(period = 60, requestNum = 100)
     public Result sendCode() {
         log.debug("发送验证码");
+        return Result.fail("功能未完成");
+    }
+
+    @Override
+    public <T> Result login(Class<T> user) {
         return Result.fail("功能未完成");
     }
 }

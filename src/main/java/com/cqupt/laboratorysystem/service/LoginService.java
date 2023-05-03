@@ -7,4 +7,7 @@ import com.cqupt.laboratorysystem.dto.Result;
  */
 public interface LoginService {
     Result sendCode();
+
+    <T>Result login(Class<T>user);
+
 }

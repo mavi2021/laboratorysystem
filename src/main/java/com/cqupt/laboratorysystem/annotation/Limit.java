@@ -18,7 +18,7 @@ public @interface Limit {
     int period() default 0;
 
     // 单位时间最大访问次数
-    int requestNum() default 10000;
+    int requestLimitMaxNum() default 10000;
 
     LimitType limit() default LimitType.CUSTOMER;
 

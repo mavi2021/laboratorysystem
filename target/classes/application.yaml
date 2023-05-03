@@ -12,6 +12,10 @@ spring:
     username: zeng_cqupt@163.com
     password: QGIPKHLWLEUNVFRS
     protocol: smtp
+  security:
+    user:
+      name: admin
+      password: admin
 
 #  15893572461
 server:
