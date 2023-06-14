@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
  */
 @Data
 @ApiModel("实验类")
-@TableName("experiment")
+@TableName("experiment_details")
 public class Experiment {
 
     /**

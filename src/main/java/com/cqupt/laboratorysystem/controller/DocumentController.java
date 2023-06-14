@@ -1,6 +1,6 @@
 package com.cqupt.laboratorysystem.controller;
 
-import com.cqupt.laboratorysystem.dto.Result;
+import com.cqupt.laboratorysystem.common.dto.Result;
 import com.cqupt.laboratorysystem.service.DocumentService;
 import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,12 +22,12 @@ public class DocumentController {
     @GetMapping("/upload")
     public Result upload(){
 //        documentService.upload("1");
-        return Result.ok();
+        return Result.success();
     }
 
     @GetMapping("/download")
     public Result download(){
-        return Result.ok();
+        return Result.success();
     }
 
 }

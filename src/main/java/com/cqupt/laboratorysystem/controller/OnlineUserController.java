@@ -9,7 +9,10 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @Api("在线用户管理接口")
-public class OnlineController {
+public class OnlineUserController {
 
-    
+
+
+
+
 }

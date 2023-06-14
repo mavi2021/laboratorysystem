@@ -1,7 +1,7 @@
 package com.cqupt.laboratorysystem.controller;
 
-import com.cqupt.laboratorysystem.annotation.Limit;
-import com.cqupt.laboratorysystem.dto.Result;
+import com.cqupt.laboratorysystem.common.annotation.Limit;
+import com.cqupt.laboratorysystem.common.dto.Result;
 import com.cqupt.laboratorysystem.pojo.Experiment;
 import com.cqupt.laboratorysystem.service.ExperimentService;
 import io.swagger.annotations.Api;
@@ -28,7 +28,7 @@ public class ExperimentController {
     @ApiOperation("查询所有实验详情")
     @Limit(period = 60, requestLimitMaxNum = 100, type = "ip")
     public Result queryExperimentList(){
-        return Result.ok(experimentService.query().list());
+        return Result.success(experimentService.query().list());
     }
 
     /**
@@ -39,7 +39,7 @@ public class ExperimentController {
     @GetMapping("/get/{id}")
     @ApiOperation("根据id查询实验详情")
     public Result queryExperimentById(@PathVariable("id") Long id){
-        return Result.ok(experimentService.getById(id));
+        return Result.success(experimentService.getById(id));
     }
 
     /**
@@ -50,7 +50,7 @@ public class ExperimentController {
     @DeleteMapping("/delete/{id}")
     @ApiOperation("根据id删除实验")
     public Result deleteExperimentById(@PathVariable("id") Long id){
-        return Result.ok(experimentService.removeById(id));
+        return Result.success(experimentService.removeById(id));
     }
 
     /**
@@ -60,7 +60,7 @@ public class ExperimentController {
      */
     @PostMapping("/add")
     public Result addExperimentById(@RequestBody Experiment experiment){
-        return Result.ok(experimentService.save(experiment));
+        return Result.success(experimentService.save(experiment));
     }
 
     /**
@@ -71,7 +71,7 @@ public class ExperimentController {
     @PutMapping("/update")
     @ApiOperation("根据id修改实验")
     public Result updateExperimentById(@RequestBody Experiment experiment){
-        return Result.ok(experimentService.updateById(experiment));
+        return Result.success(experimentService.updateById(experiment));
     }
 
 }

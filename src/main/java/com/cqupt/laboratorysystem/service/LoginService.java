@@ -1,6 +1,7 @@
 package com.cqupt.laboratorysystem.service;
 
-import com.cqupt.laboratorysystem.dto.Result;
+import com.cqupt.laboratorysystem.common.dto.Result;
+import com.cqupt.laboratorysystem.pojo.Teacher;
 
 /**
  * @create 2023/5/2 21:40
@@ -8,6 +9,9 @@ import com.cqupt.laboratorysystem.dto.Result;
 public interface LoginService {
     Result sendCode();
 
-    <T>Result login(Class<T>user);
+//    <T>Result login(Class<T>user);
+
+    Result login(Teacher user);
+
 
 }
