@@ -74,8 +74,8 @@ aliyun:
     file:
       endpoint: oss-cn-hongkong.aliyuncs.com
       bucket: xiaomi-go2.oss-cn-hongkong.aliyuncs.com
-      accessKeyId: LTAI5t95jCFtkC5PV4AGXFNV
-      accessKeySecret: 6Ki43tzFXhA7AZU5U5wa9ZjyAF18eH
+      accessKeyId: 
+      accessKeySecret: 
 
 captcha:
   enable: true
