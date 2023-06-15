@@ -1,9 +1,8 @@
-package com.cqupt.laboratorysystem.dao;
+package com.cqupt.laboratorysystem.mapper;
 
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.cqupt.laboratorysystem.pojo.Experiment;
-import org.apache.ibatis.annotations.Mapper;
+import com.cqupt.laboratorysystem.entity.Experiment;
 
 /**
  * @create 2023/4/30 16:18

@@ -1,4 +1,4 @@
-package com.cqupt.laboratorysystem.user.dao;
+package com.cqupt.laboratorysystem.user.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.cqupt.laboratorysystem.user.entity.User;

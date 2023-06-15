@@ -1,4 +1,4 @@
-package com.cqupt.laboratorysystem.pojo;
+package com.cqupt.laboratorysystem.entity;
 
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.AllArgsConstructor;

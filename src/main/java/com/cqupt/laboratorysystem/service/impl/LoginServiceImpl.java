@@ -1,7 +1,7 @@
-package com.cqupt.laboratorysystem.service.serviceImpl;
+package com.cqupt.laboratorysystem.service.impl;
 
 import com.cqupt.laboratorysystem.common.dto.Result;
-import com.cqupt.laboratorysystem.pojo.Teacher;
+import com.cqupt.laboratorysystem.entity.Teacher;
 import com.cqupt.laboratorysystem.service.LoginService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

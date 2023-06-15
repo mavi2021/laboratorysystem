@@ -19,6 +19,7 @@ public class SwaggerConfig {
     @Bean
     public Docket docket(){
         return new Docket(DocumentationType.SWAGGER_2)
+                .enable(true)
                 .apiInfo(new ApiInfoBuilder().title("LaboratorySystem Document")
                 .description("LaboratorySystem Document").build());
     }

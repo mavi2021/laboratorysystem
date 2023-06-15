@@ -1,8 +1,8 @@
 package com.cqupt.laboratorysystem.common.config;
 
 import com.cqupt.laboratorysystem.common.filter.CaptchaFilter;
-import com.cqupt.laboratorysystem.common.handler.LoginFailureHandler;
-import com.cqupt.laboratorysystem.common.handler.LoginSuccessHandler;
+import com.cqupt.laboratorysystem.security.controller.handler.LoginFailureHandler;
+import com.cqupt.laboratorysystem.security.controller.handler.LoginSuccessHandler;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -17,7 +17,6 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 /**
  * @create 2023/5/3 16:28
@@ -57,7 +56,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
              .authorizeRequests()
                     .antMatchers("/configuration/ui","/swagger-ui.html",
                         "/swagger-resources/**","/v2/api-docs",
-                        "/actuator/**","/captcha","/index","/emp/**","/welcome","/main","/custom-authenticate"
+                        "/actuator/**","/captcha","/index","/emp/**",
+                        "/welcome","/main","/user/**","/druid/**"
                     ).permitAll()
                     .anyRequest().authenticated()
                     .and()
@@ -66,11 +66,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 //             .addFilterBefore(captchaFilter, UsernamePasswordAuthenticationFilter.class)
              .formLogin()
                     .loginPage("/loginPage")
-                    .loginProcessingUrl("/custom-authenticate").permitAll()
+                    .loginProcessingUrl("/custom-authenticate")
                     .failureHandler(loginFailureHandler)
                     .successHandler(loginSuccessHandler)
-                    .successForwardUrl("/main").permitAll()
-//                    .defaultSuccessUrl("/main",true).permitAll()
                     .and()
 
              //退出登录

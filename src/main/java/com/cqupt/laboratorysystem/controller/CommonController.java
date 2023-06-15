@@ -3,6 +3,7 @@ package com.cqupt.laboratorysystem.controller;
 import com.wf.captcha.utils.CaptchaUtil;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
@@ -90,5 +91,10 @@ public class CommonController {
     public String welcome() {
 //        ModelAndView modelAndView = new ModelAndView("index");
         return "welcome";
+    }
+
+    @PostMapping("student")
+    public String listStudnets(){
+        return "/student/list";
     }
 }

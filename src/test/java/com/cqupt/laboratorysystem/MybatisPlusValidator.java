@@ -1,8 +1,8 @@
 package com.cqupt.laboratorysystem;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
-import com.cqupt.laboratorysystem.pojo.User;
-import com.cqupt.laboratorysystem.service.UserService;
+import com.cqupt.laboratorysystem.user.entity.User;
+import com.cqupt.laboratorysystem.user.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

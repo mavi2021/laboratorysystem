@@ -1,8 +1,13 @@
-package com.cqupt.laboratorysystem.pojo;
+package com.cqupt.laboratorysystem.user.entity;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableLogic;
 import com.baomidou.mybatisplus.annotation.TableName;
+import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
+import org.springframework.data.annotation.Id;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
@@ -12,16 +17,22 @@ import java.time.LocalDateTime;
  */
 @Data
 @TableName("user")
+@ApiModel(value="User", description="用户管理对象")
 public class User implements Serializable {
 
+
     @ApiModelProperty(value = "用户id")
-    private String id;
+    @TableId(type = IdType.AUTO)
+    private Long id;
 
     @ApiModelProperty(value = "用户登录名")
     private String loginName;
 
-    @ApiModelProperty(value = "用户昵称")
+    @ApiModelProperty(value = "用户姓名")
     private String username;
+
+    @ApiModelProperty(value = "用户类型")
+    private String type;
 
     @ApiModelProperty(value = "用户密码")
     private String password;
@@ -39,7 +50,8 @@ public class User implements Serializable {
     private int enabled;
 
     @ApiModelProperty(value = "用户是否被删除")
-    private int isDeleted;
+    @TableLogic(value = "0", delval = "1")
+    private int deleted;
 
     @ApiModelProperty(value = "用户账号创建时间")
     private LocalDateTime createTime;

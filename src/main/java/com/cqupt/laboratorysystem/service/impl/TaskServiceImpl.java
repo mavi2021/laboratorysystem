@@ -1,9 +1,8 @@
-package com.cqupt.laboratorysystem.service.serviceImpl;
+package com.cqupt.laboratorysystem.service.impl;
 
 import com.cqupt.laboratorysystem.service.TaskService;
 import com.cqupt.laboratorysystem.service.EmailService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 

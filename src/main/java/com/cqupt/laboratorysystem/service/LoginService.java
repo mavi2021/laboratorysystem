@@ -1,7 +1,7 @@
 package com.cqupt.laboratorysystem.service;
 
 import com.cqupt.laboratorysystem.common.dto.Result;
-import com.cqupt.laboratorysystem.pojo.Teacher;
+import com.cqupt.laboratorysystem.entity.Teacher;
 
 /**
  * @create 2023/5/2 21:40

@@ -1,4 +1,4 @@
-package com.cqupt.laboratorysystem.service.serviceImpl;
+package com.cqupt.laboratorysystem.security.service.impl;
 
 import cn.hutool.core.bean.BeanUtil;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;

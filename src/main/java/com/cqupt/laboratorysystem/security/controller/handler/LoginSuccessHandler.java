@@ -1,4 +1,4 @@
-package com.cqupt.laboratorysystem.common.handler;
+package com.cqupt.laboratorysystem.security.controller.handler;
 
 import cn.hutool.json.JSONUtil;
 import com.cqupt.laboratorysystem.common.dto.Result;

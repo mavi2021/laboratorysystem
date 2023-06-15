@@ -2,7 +2,7 @@ package com.cqupt.laboratorysystem.controller;
 
 import com.cqupt.laboratorysystem.common.annotation.Limit;
 import com.cqupt.laboratorysystem.common.dto.Result;
-import com.cqupt.laboratorysystem.pojo.Experiment;
+import com.cqupt.laboratorysystem.entity.Experiment;
 import com.cqupt.laboratorysystem.service.ExperimentService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;

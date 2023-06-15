@@ -1,4 +1,4 @@
-package com.cqupt.laboratorysystem.pojo;
+package com.cqupt.laboratorysystem.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

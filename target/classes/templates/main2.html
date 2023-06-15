@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>main2</title>
+    <meta charset="UTF-8">
+    <title>main2</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<!--    <link rel="stylesheet" href="/templates/css/login.css" type="text/css">-->
+</head>
+<body>
+<h1>main2</h1>
+<div>
+    <button id="myButton">点击我</button>
+</div>
+<script>
+    $(document).ready(function() {
+        $("#myButton").click(function() {
+            $.ajax({
+                type: "POST",
+                url: "/my/test",
+                data: {
+                    // 传递到控制器方法的数据
+                },
+                success: function(data) {
+                    // 成功处理 AJAX 请求后的操作
+                },
+                error: function() {
+                    // AJAX 请求出现错误后的操作
+                }
+            });
+        });
+    });
+</script>
+</body>
+</html>
