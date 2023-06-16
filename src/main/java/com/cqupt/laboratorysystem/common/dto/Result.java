@@ -41,10 +41,18 @@ public class Result<T> {
     }
 
     public static Result<Object> fail(){
-        return new Result(500,"fail",null,null);
+        return new Result(400,"fail",null,null);
     }
 
     public static Result<Object> fail(String message){
+        return new Result(400,message,null,null);
+    }
+
+    public static Result<Object> error(){
+        return new Result(500,"fail",null,null);
+    }
+
+    public static Result<Object> error(String message){
         return new Result(500,message,null,null);
     }
 

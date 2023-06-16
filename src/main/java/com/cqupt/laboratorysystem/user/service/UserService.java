@@ -9,11 +9,15 @@ import com.cqupt.laboratorysystem.user.entity.User;
  * @create 2023/6/13 22:14
  */
 public interface UserService extends IService<User> {
-    Result<Object> getUserList(UserSearchCondition searchCondition);
+    Result<Object> pageList(UserSearchCondition searchCondition);
 
-    Result<Object> addUser(User user);
+    Result<Object> add(User user);
 
-    Result<Object> deleteUserById(Integer id);
+    Result<Object> deleteById(Long id);
 
-    Result<Object> updateUser(User user);
+    public Result<Object> update(User user);
+
+    Result<Object> updateWithOptimisticLock(User user);
+
+    Result<Object> register(User user);
 }

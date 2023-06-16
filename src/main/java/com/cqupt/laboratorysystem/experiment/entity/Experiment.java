@@ -1,4 +1,4 @@
-package com.cqupt.laboratorysystem.entity;
+package com.cqupt.laboratorysystem.experiment.entity;
 
 import com.baomidou.mybatisplus.annotation.TableName;
 import io.swagger.annotations.ApiModel;
@@ -16,7 +16,6 @@ public class Experiment {
 
     /**
      * 实验id
-     * 雪花算法生成，全局唯一
      */
 //    @TableId(value = "id")
     private Long id;

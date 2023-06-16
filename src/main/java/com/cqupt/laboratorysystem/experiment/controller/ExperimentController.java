@@ -1,24 +1,25 @@
-package com.cqupt.laboratorysystem.controller;
+package com.cqupt.laboratorysystem.experiment.controller;
 
 import com.cqupt.laboratorysystem.common.annotation.Limit;
 import com.cqupt.laboratorysystem.common.dto.Result;
-import com.cqupt.laboratorysystem.entity.Experiment;
-import com.cqupt.laboratorysystem.service.ExperimentService;
+import com.cqupt.laboratorysystem.experiment.entity.Experiment;
+import com.cqupt.laboratorysystem.experiment.service.ExperimentService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 /**
  * @create 2023/4/30 16:03
  */
-@Api(tags = "实验管理相关接口")
-@RequestMapping("/experiment")
 @RestController
+@RequestMapping("/experiment")
+@RequiredArgsConstructor
+@Api(tags = "实验管理相关接口")
 public class ExperimentController {
 
-    @Autowired
-    private ExperimentService experimentService;
+    private final ExperimentService experimentService;
 
     /**
      * 查询所有实验详情

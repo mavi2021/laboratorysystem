@@ -4,7 +4,7 @@ import com.cqupt.laboratorysystem.common.config.EmailConfig;
 import com.cqupt.laboratorysystem.controller.MyController;
 import com.cqupt.laboratorysystem.service.DocumentService;
 import com.cqupt.laboratorysystem.service.LoginService;
-import com.cqupt.laboratorysystem.service.impl.ExperimentServiceImpl;
+import com.cqupt.laboratorysystem.experiment.service.impl.ExperimentServiceImpl;
 import com.cqupt.laboratorysystem.service.EmailService;
 import lombok.RequiredArgsConstructor;
 import org.junit.jupiter.api.Test;
