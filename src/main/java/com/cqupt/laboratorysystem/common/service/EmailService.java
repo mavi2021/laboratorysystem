@@ -1,4 +1,4 @@
-package com.cqupt.laboratorysystem.service;
+package com.cqupt.laboratorysystem.common.service;
 
 import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;

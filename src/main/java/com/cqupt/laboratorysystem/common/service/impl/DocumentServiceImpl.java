@@ -1,11 +1,11 @@
-package com.cqupt.laboratorysystem.service.impl;
+package com.cqupt.laboratorysystem.common.service.impl;
 
 import com.aliyun.oss.OSS;
 import com.aliyun.oss.model.DeleteBucketCnameRequest;
 import com.aliyun.oss.model.GetObjectRequest;
 import com.aliyun.oss.model.OSSObject;
 import com.aliyun.oss.model.PutObjectRequest;
-import com.cqupt.laboratorysystem.service.DocumentService;
+import com.cqupt.laboratorysystem.common.service.DocumentService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;

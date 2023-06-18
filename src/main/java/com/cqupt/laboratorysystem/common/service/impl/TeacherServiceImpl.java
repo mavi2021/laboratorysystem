@@ -1,9 +1,9 @@
-package com.cqupt.laboratorysystem.service.impl;
+package com.cqupt.laboratorysystem.common.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.cqupt.laboratorysystem.mapper.TeacherMapper;
-import com.cqupt.laboratorysystem.entity.Teacher;
-import com.cqupt.laboratorysystem.service.TeacherService;
+import com.cqupt.laboratorysystem.common.mapper.TeacherMapper;
+import com.cqupt.laboratorysystem.common.entity.Teacher;
+import com.cqupt.laboratorysystem.common.service.TeacherService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

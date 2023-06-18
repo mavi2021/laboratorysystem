@@ -1,9 +1,8 @@
-package com.cqupt.laboratorysystem.controller;
+package com.cqupt.laboratorysystem.common.controller;
 
 import com.cqupt.laboratorysystem.common.annotation.Limit;
 import com.cqupt.laboratorysystem.common.dto.Result;
-import com.cqupt.laboratorysystem.service.LoginService;
-import com.wf.captcha.utils.CaptchaUtil;
+import com.cqupt.laboratorysystem.common.service.LoginService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.RequiredArgsConstructor;
@@ -12,9 +11,6 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 
 /**
  * @create 2023/5/2 21:32

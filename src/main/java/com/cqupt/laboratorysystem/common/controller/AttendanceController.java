@@ -1,4 +1,4 @@
-package com.cqupt.laboratorysystem.controller;
+package com.cqupt.laboratorysystem.common.controller;
 
 import io.swagger.annotations.Api;
 import org.springframework.web.bind.annotation.RequestMapping;

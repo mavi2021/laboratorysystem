@@ -1,4 +1,4 @@
-package com.cqupt.laboratorysystem.service;
+package com.cqupt.laboratorysystem.common.service;
 
 import com.aliyun.oss.model.OSSObject;
 

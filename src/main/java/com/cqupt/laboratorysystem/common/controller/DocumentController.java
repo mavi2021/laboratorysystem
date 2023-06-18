@@ -1,7 +1,7 @@
-package com.cqupt.laboratorysystem.controller;
+package com.cqupt.laboratorysystem.common.controller;
 
 import com.cqupt.laboratorysystem.common.dto.Result;
-import com.cqupt.laboratorysystem.service.DocumentService;
+import com.cqupt.laboratorysystem.common.service.DocumentService;
 import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

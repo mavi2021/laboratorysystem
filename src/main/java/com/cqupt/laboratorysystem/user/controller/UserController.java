@@ -1,5 +1,7 @@
 package com.cqupt.laboratorysystem.user.controller;
 
+import com.cqupt.laboratorysystem.common.base.BaseController;
+import com.cqupt.laboratorysystem.common.condition.SearchCondition;
 import com.cqupt.laboratorysystem.common.dto.Result;
 import com.cqupt.laboratorysystem.user.condition.UserSearchCondition;
 import com.cqupt.laboratorysystem.user.entity.User;
@@ -19,41 +21,48 @@ import javax.validation.Valid;
 @RequestMapping("/user")
 @RequiredArgsConstructor
 @Api(tags = {"用户接口"})
-public class UserController {
+public class UserController{
 
     private final UserService userService;
 
-    @GetMapping("/list")
-    @ApiOperation("获取用户分页列表")
+    @GetMapping("/getListByPage")
+    @ApiOperation("获取分页列表")
     @ApiImplicitParams({
-            @ApiImplicitParam(name = "searchCondition", value = "用户搜索条件信息", required = true, dataType = "UserSearchCondition", paramType = "body"
+            @ApiImplicitParam(name = "searchCondition", value = "搜索条件信息", required = true, dataType = "SearchCondition", paramType = "body"
     )})
-    public Result<Object> pageList(@Valid UserSearchCondition searchCondition){
-        return userService.pageList(searchCondition);
+    public Result<Object> getListByPage(@Valid SearchCondition searchCondition){
+
+        return userService.getListByPage(searchCondition);
     }
 
     @PostMapping("/add")
-    @ApiOperation("添加用户")
+    @ApiOperation("添加")
     public Result<Object> add(@Valid @RequestBody User user){
         return userService.add(user);
     }
 
 
     @DeleteMapping("/delete/{id}")
-    @ApiOperation("删除用户")
+    @ApiOperation("删除")
     public Result<Object> delete(@PathVariable("id") @Valid Long id){
         return userService.deleteById(id);
     }
 
     @PutMapping("/update")
-    @ApiOperation("修改用户")
+    @ApiOperation("修改")
     public Result<Object> update(@Valid @RequestBody User user){
-        //使用乐观锁修改用户
-        return userService.updateWithOptimisticLock(user);
+        //使用乐观锁修改用户c
+        return userService.update(user);
+    }
+
+    @GetMapping("/query/{id}")
+    @ApiOperation("查询")
+    public Result<Object> query(@PathVariable("id") @Valid Long id){
+        return userService.queryById(id);
     }
 
     @PostMapping("/register")
-    @ApiOperation("注册用户")
+    @ApiOperation("注册")
     public Result<Object> registerUser(@Valid @RequestBody User user){
         return userService.register(user);
     }

@@ -1,4 +1,4 @@
-package com.cqupt.laboratorysystem.controller;
+package com.cqupt.laboratorysystem.common.controller;
 
 import com.wf.captcha.utils.CaptchaUtil;
 import org.springframework.stereotype.Controller;

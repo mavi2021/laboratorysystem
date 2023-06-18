@@ -1,6 +1,7 @@
 package com.cqupt.laboratorysystem.user.service.impl;
 
 import com.cqupt.laboratorysystem.common.annotation.Log;
+import com.cqupt.laboratorysystem.common.condition.SearchCondition;
 import com.cqupt.laboratorysystem.common.exception.ServiceException;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
@@ -28,22 +29,29 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
 
     @Override
     @Log
-    public Result<Object> pageList(UserSearchCondition searchCondition) {
-
+    public Result<Object> getListByPage(SearchCondition searchCondition) {
+        UserSearchCondition baseSearchCondition = null;
+        if (searchCondition instanceof UserSearchCondition) {
+            baseSearchCondition = (UserSearchCondition) searchCondition;
+            // 进行操作
+        } else {
+            // 处理类型不匹配的情况
+            throw new ServiceException("搜索条件转换类型不匹配");
+        }
         // 对搜索条件的有效性进行验证
         if (searchCondition.getCurrentPage() < 1 || searchCondition.getPageSize() < 1) {
             return Result.fail("无效的分页参数");
         }
         QueryWrapper<User> queryWrapper = new QueryWrapper<>();
 
-        queryWrapper.lambda().like(searchCondition.getName()!=null
+        queryWrapper.lambda().like(baseSearchCondition.getName()!=null
                 //根据用户姓名查询
-                ,User::getUsername,searchCondition.getName())
+                ,User::getUsername,baseSearchCondition.getName())
                 //根据实验室名查询
-                .eq(searchCondition.getLaboratory()!=null
-                        ,User::getLaboratory,searchCondition.getLaboratory())
+                .eq(baseSearchCondition.getLaboratory()!=null
+                        ,User::getLaboratory,baseSearchCondition.getLaboratory())
                 //根据用户类型查询
-                .eq(searchCondition.getType()!=null,User::getType,searchCondition.getType())
+                .eq(baseSearchCondition.getType()!=null,User::getType,baseSearchCondition.getType())
                 .orderByAsc(User::getUsername);
 
         IPage<User> page = new Page<>(searchCondition.getCurrentPage(), searchCondition.getPageSize());
@@ -124,6 +132,24 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         return Result.success("更新用户成功");
     }
 
+    @Override
+    @Log
+    public Result<Object> queryById(Long id) {
+        User user = null;
+        try {
+            // 检查用户是否存在
+            user = getById(id);
+            if(user == null){
+                return Result.fail("用户不存在");
+            }
+            // 更新用户操作日志
+            //...
+        } catch (Exception e) {
+            throw new ServiceException("查询用户失败，" + e.getMessage(), e);
+        }
+        return Result.success(user);
+    }
+
     /**
      * 手动实现乐观锁，如需使用本方法，请关闭MybatisPlus的乐观锁
      * @param user
@@ -176,6 +202,8 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         }
         return Result.success("注册用户成功");
     }
+
+
 
     /**
      * 校验用户名或手机号是否已经被注册过

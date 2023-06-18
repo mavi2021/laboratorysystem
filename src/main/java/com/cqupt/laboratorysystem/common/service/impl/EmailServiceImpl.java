@@ -1,6 +1,6 @@
-package com.cqupt.laboratorysystem.service.impl;
+package com.cqupt.laboratorysystem.common.service.impl;
 
-import com.cqupt.laboratorysystem.service.EmailService;
+import com.cqupt.laboratorysystem.common.service.EmailService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.mail.SimpleMailMessage;

@@ -1,11 +1,11 @@
 package com.cqupt.laboratorysystem;
 
 import com.cqupt.laboratorysystem.common.config.EmailConfig;
-import com.cqupt.laboratorysystem.controller.MyController;
-import com.cqupt.laboratorysystem.service.DocumentService;
-import com.cqupt.laboratorysystem.service.LoginService;
+import com.cqupt.laboratorysystem.common.controller.MyController;
+import com.cqupt.laboratorysystem.common.service.DocumentService;
+import com.cqupt.laboratorysystem.common.service.LoginService;
 import com.cqupt.laboratorysystem.experiment.service.impl.ExperimentServiceImpl;
-import com.cqupt.laboratorysystem.service.EmailService;
+import com.cqupt.laboratorysystem.common.service.EmailService;
 import lombok.RequiredArgsConstructor;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

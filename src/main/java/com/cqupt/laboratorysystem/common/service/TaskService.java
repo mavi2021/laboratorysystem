@@ -1,4 +1,4 @@
-package com.cqupt.laboratorysystem.service;
+package com.cqupt.laboratorysystem.common.service;
 
 /**
  * @create 2023/5/2 10:49

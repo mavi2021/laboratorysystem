@@ -1,4 +1,4 @@
-package com.cqupt.laboratorysystem.service;
+package com.cqupt.laboratorysystem.common.service;
 
 public interface GPUService {
 }

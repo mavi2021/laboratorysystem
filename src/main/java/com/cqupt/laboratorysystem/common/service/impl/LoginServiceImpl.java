@@ -1,8 +1,8 @@
-package com.cqupt.laboratorysystem.service.impl;
+package com.cqupt.laboratorysystem.common.service.impl;
 
 import com.cqupt.laboratorysystem.common.dto.Result;
-import com.cqupt.laboratorysystem.entity.Teacher;
-import com.cqupt.laboratorysystem.service.LoginService;
+import com.cqupt.laboratorysystem.common.entity.Teacher;
+import com.cqupt.laboratorysystem.common.service.LoginService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

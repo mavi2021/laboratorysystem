@@ -1,4 +1,4 @@
-package com.cqupt.laboratorysystem.controller;
+package com.cqupt.laboratorysystem.common.controller;
 
 import com.cqupt.laboratorysystem.common.annotation.MyAnnotation;
 import org.springframework.security.access.prepost.PreAuthorize;
